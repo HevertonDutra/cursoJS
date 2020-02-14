@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+
+    <style>
+        body {
+            background-color: rgba(32, 47, 68, 0.603);    
+            color: white;
+            font: normal 16pt Arial;
+            
+        } 
+        h1 {
+            color: rgb(128, 170, 44)
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong>.</p>
+    <div id="msg">Clique em mim</div>
+    <script>
+      // Usando ID 
+      var corpo = document.body;
+      var p1 = document.getElementsByTagName('p')[1];
+      /*
+      var d = document.getElementById('msg'); // Seleciona o id que coloquei na div
+        d.style.background = 'green'; // altera a cor da linha
+        d.innerText = 'Estou aguardando...'; //JS esta mudando o teste diretamente na tela
+        */
+       var d = document.querySelector('div#msg');
+       d.style.background = 'blue';
+</script>
+</body>
+</html>
