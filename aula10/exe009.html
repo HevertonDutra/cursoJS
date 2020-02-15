@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        h1 {
+            font: normal 20px Arial;
+            color: black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cadastro de ativos</h1>
+    <input type="text" nome="cadNome" id="cadNome">
+    <input type="text" nome="numTel" id="numTel"> 
+    <input type="date" nome="dataAni" id="dataAni"> 
+    <div id="btnSalvar"></div><input type="button" value="salvar" onclick="btnSalvar()">
+    <div id="btnSalvar">Salvar</div>
+    <Script>
+        function btnSalvar() {
+            var cad1 = document.getElementById("cadNome");
+            var cad2 = document.getElementById("numTel");
+            var cad3 = document.getElementById("dataAni");
+            var cd1 = String(cad1.value);
+            var cd2 = String(cad2.value);
+            var cd3 = Date(cad3.value);
+            var salvar = cd1 + cd2 + cd3
+            var salvar = document.getElementById("btnSalvar");
+            btnSalvar.innerHTML = `Os dados salvos são: ${cd1},${cd2},${cd3}.`
+        }
+    </Script>
+</body>
+
+</html>
