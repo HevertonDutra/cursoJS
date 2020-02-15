@@ -1,6 +1,7 @@
 # cursoJS
 Aprendendo a programar em JavaScript
 
+
 aula 08 Operadores.
 https://www.youtube.com/watch?v=BP63NhITvao
 Precedência:
@@ -12,13 +13,15 @@ Precedência:
 
 Ternário:
 
+-----///------///------///----------///------///------///----------///------///------///----------///------///------///----------///
 
+Extensões instaladas no VsCode
+Whatch in Chrome = Atualiza o chrome quando salvar o código
+NODE EXEC = executa operações dentro do chrome 
 
-extensoes instaladas no vscode
-whatch in chrome
-node exec
+-----///------///------///----------///------///------///----------///------///------///----------///------///------///----------///
 
-aula009
+Aula 09
 
 Marca = TagName -> getElementsByTagName()
 EX: 
@@ -75,3 +78,103 @@ Seletor:
        var d = document.querySelector('div#msg'); // # igual a class 
        d.style.background = 'blue';
 </script>
+
+-----///------///------///----------///------///------///----------///------///------///----------///------///------///-----
+
+Aula 10 function e DOM
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento Dom</title>    
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: green;
+            color: white;
+            width: 150px;
+            height: 150px;
+            line-height: 150px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div var id="area"> 
+    interaja...
+</div>
+
+<script>
+    var a = document.getElementById('area'); //pegando o ID da dive de cima que é AREA
+    a.addEventListener('click', clicar); // criando um escuta de evento de clicar 
+    a.addEventListener('mouseenter', entrar); // criando uma escuta do evento entrar quando o mouse entrar no quadrado
+    a.addEventListener('mouseout', sair); // criando uma escuta do evento de sair de dentro do quadrdo
+
+    // essa funcção indica que eu cliquei no quadrado e mudar a cor do quadrado para vermelho
+    function clicar(){ 
+        a.innerText = 'Clicou!';
+        a.style.background = 'red';
+    }
+    // essa funcção indica que eu entrei com o mouse no quadrado e mudar a cor do quadrado para amarelo
+    function entrar(){
+        a.innerText = 'Entrou!';
+        a.style.background = 'yellow';
+    }
+    // essa funcção indica que eu sai com o mouse no quadrado e mudar a cor do quadrado para verde
+    function sair() {
+        a.innerText = 'Saiu!'
+        a.style.background = 'green';
+    }
+</script>
+</body>
+</html>
+
+
+-----///------///------///----------///------///------///----------///------///------///----------///------///------///-----
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Numeros</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+        div#res{
+            margin-top: 20px;
+            
+        }
+
+        
+    </style>
+</head>
+<body> 
+    <h1>Somando Valores</h1> 
+    <input type="number" name="txtn1" id="txtn1"> + 
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res">Resultado</div>
+    <script>
+        function somar(){
+            var tn1 = document.getElementById('txtn1'); // caixa de texto selecionando o ID txtn1 que vem do input [   ]
+            var tn2 = document.querySelector(`input#txtn2`); // caixa de texto selecionando o input todo com o querySelector # ID
+            var res = document.querySelector(`div#res`); // evento de click do mouse no botão somar selecionando o input # ID
+            var n1 = Number(tn1.value); //coletando o valor digitado no input caixa 1 Number pq tem que converter os dados do input
+            var n2 = Number(tn2.value); //coletando o valor digitado no input caixa 2 Number pq tem que converter os dados do input
+            var somar = n1 + n2 // variavel de soma com o campo 1 e 2 
+            res.innerHTML = `A soma dos valores ${n1} mais o ${n2} é igual a <strong>${somar}</strong>.`
+            // res.innerHTML é a troca do texto da palavra resultado setado na DIV ${} seta quais valores aparecem no texto ex: n1 =2 mais o n2=3 ${somar} é igual a = 5.
+        }
+    </script>
+</body>
+</html>
