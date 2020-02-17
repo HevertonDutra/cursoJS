@@ -20,18 +20,21 @@
     <input type="text" nome="numTel" id="numTel"> 
     <input type="date" nome="dataAni" id="dataAni"> 
     <div id="btnSalvar"></div><input type="button" value="salvar" onclick="btnSalvar()">
-    <div id="btnSalvar">Salvar</div>
+    <div id="btnSalva">Salvar</div>
     <Script>
         function btnSalvar() {
-            var cad1 = document.getElementById("cadNome");
-            var cad2 = document.getElementById("numTel");
-            var cad3 = document.getElementById("dataAni");
+            var cad1 = document.querySelector("input#cadNome");
+            var cad2 = document.querySelector("input#numTel");
+            var cad3 = document.querySelector("input#dataAni");
+            console.log('antes', cad3.value);
+            
             var cd1 = String(cad1.value);
             var cd2 = String(cad2.value);
-            var cd3 = Date(cad3.value);
+            var cd3 = new Date(cad3.value);
+            console.log('depois', cd3);
             var salvar = cd1 + cd2 + cd3
             var salvar = document.getElementById("btnSalvar");
-            btnSalvar.innerHTML = `Os dados salvos são: ${cd1},${cd2},${cd3}.`
+            btnSalva.innerHTML = `Os dados salvos são: <b>${cd1}</b> <b>${cd2}</b>,${cd3}.`
         }
     </Script>
 </body>
