@@ -178,3 +178,9 @@ Aula 10 function e DOM
     </script>
 </body>
 </html>
+
+push pro git linha de comando
+git status
+git add . 
+git commit -m "msng"
+git push origin master
