@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <h1>Você é brasileiro ou estrangeiro?</h1>
+    Digite sua Nacionalidade<input type="text" name="txtCampo" id="txtCampo">
+    <input type="button" value="Submit" onclick="butSubmit()">
+    <div id="res">
+        <script>
+            function butSubmit(){
+                var txt = document.querySelector('input#txtCampo');
+                var res = document.querySelector('div#res');
+                var txt = String(txt.value);
+                res.innerHTML = `<p>Você é de nacionalidade <strong>${txt}</strong>.</p>`
+                if (txt == 'Brasileiro' || 'Brasileira') {
+                    res.innerHTML += `<p>Você é um <strong>${txt}</strong>.</p>`
+                }else {
+                    res.innerHTML += `<p>Você é um estrangeiro de nacionalidade <strong>${txt}</strong>.</p>`
+                }
+                 
+            }
+        </script>
+
+    </div>
+</head>
+<body>
+    
+</body>
+</html>

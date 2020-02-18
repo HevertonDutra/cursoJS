@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de carro</title>
+    <h1>Qual o modelo seu carro?</h1>
+    Digite aqui o modelo do seu carro: <input type="text" name="txt" id="txt">
+    <input type="button" value="Submit" onclick="modelo()">
+    <div id="res">
+       <script>
+           function modelo(){
+        var txt = document.querySelector(`input#txt`);
+        var res = document.querySelector(`div#res`) ;
+        var txt = String(txt.value);
+        res.innerHTML = `O seu carro é um <strong>${txt}</strong>`
+        if (txt == 'Uno'){
+            res.innerHTML += `<p>SIM!!! Há, então vai Chega a velocidade da luz pq é um <strong>${txt}</strong> de firma, <br> com escada no teto e adesivo da SKY!!</p>`
+        }else {
+            res.innerHTML += `<p>SIM!!! Então ele não chega a velocidade da luz pois o Uno de firma <br>
+                é o único que chega e o seu carro é um <strong>${txt}</strong> e não um super <strong>UNO de Firma.</strong></p>`
+        }
+    }
+        </script>
+    </div>
+</head>
+<body>
+    
+</body>
+</html>
