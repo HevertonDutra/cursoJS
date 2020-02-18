@@ -179,8 +179,46 @@ Aula 10 function e DOM
 </body>
 </html>
 
+-----///------///------///----------///------///------///----------///------///------///----------///------///------///-----
+Git manual:
+
 push pro git linha de comando
 git status
 git add . 
 git commit -m "msng"
 git push origin master
+
+-----///------///------///----------///------///------///----------///------///------///----------///------///------///-----
+
+IF ELSE:
+exemplo 1
+var idade = 67
+console.log(`Você tem ${idade} anos.`)
+if (idade < 16) {
+    console.log('Não vota')
+}else if (idade < 18 || idade > 65) {
+    console.log('Voto opcional')
+} else {
+    console.log('Voto Obrigatório')
+}
+-----///------///------///----------///------///------///----------///------///------///----------///------///------///-----
+exemplo 2
+var agora = new Date()
+var hora = agora.getHours()
+//var hora = 8
+console.log(`Agora sao exateamente ${hora} horas.`)
+if (hora <= 12) {
+    console.log('Bom dia!')
+} else if (hora <= 18) {
+    Console.log('Boa tarde!')
+} else {
+    console.log('Boa noite!')
+}
+-----///------///------///----------///------///------///----------///------///------///----------///------///------///-----
+
+switch case:
+
+SWITCH (exepressao){
+    case valor1
+    break
+}
