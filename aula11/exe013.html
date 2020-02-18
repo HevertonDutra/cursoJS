@@ -12,9 +12,10 @@
             function butSubmit(){
                 var txt = document.querySelector('input#txtCampo');
                 var res = document.querySelector('div#res');
-                var txt = String(txt.value);
+                var txt = String(txt.value).toLocaleLowerCase();
                 res.innerHTML = `<p>Você é de nacionalidade <strong>${txt}</strong>.</p>`
-                if (txt == 'Brasileiro' || 'Brasileira') {
+                
+                if ((txt == 'brasileiro') || (txt == 'brasileira')) {
                     res.innerHTML += `<p>Você é um <strong>${txt}</strong>.</p>`
                 }else {
                     res.innerHTML += `<p>Você é um estrangeiro de nacionalidade <strong>${txt}</strong>.</p>`
