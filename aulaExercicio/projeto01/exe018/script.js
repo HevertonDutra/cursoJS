@@ -1,5 +1,4 @@
 function contar() {
-<<<<<<< HEAD
     let ini = document.getElementById('txti');
     let fim = document.getElementById('txtf');
     let passo = document.getElementById('txtp');
@@ -32,12 +31,8 @@ function contar() {
         //Seria a bandeirinha no fim do codigo
         res.innerHTML += ` \u{1F911}`
     }
-
 }
 
 
 
 
-=======
-    var inicio = document.getElementById('txt')
->>>>>>> 43f0392df8050da6c4c52a3cea7120c511af63cf
