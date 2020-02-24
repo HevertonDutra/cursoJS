@@ -222,3 +222,19 @@ SWITCH (exepressao){
     case valor1
     break
 }
+
+
+var c =1
+while (C <= 5) {
+    console.log(c)
+}
+
+for(var c = <= 5;c++){
+    console.log(c)
+}
+
+console.log('vai comecar...')
+for(var c = ; c <= 4; c++){
+    console.log(c)
+}
+console.log('FIM!')
