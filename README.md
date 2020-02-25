@@ -238,3 +238,27 @@ for(var c = ; c <= 4; c++){
     console.log(c)
 }
 console.log('FIM!')
+
+-----///------///------///----------///------///------///----------///------///------///----------///------///------///-----
+execicio tabuada
+
+function tabuada() {
+  let num = document.getElementById('txtn')
+  let tab = document.getElementById('seltab')
+  if (num.value.length == 0) {
+    window.alert('[ERRO] por favor, digite um número!')  
+  } else {
+    let n = Number(num.value)
+    let c = 1 //contador "Enqaunto c = contador for menor igual a 10 while (c <= 10){"
+    tab.innerHTML = '' // limpa campo do select após inserir outro número para tabuada.
+    while (c <= 10){ // contador da pra fazer com for.
+        let item = document.createElement('option') // cria as linhas dentro do select o option é uma linha.
+        item.text = `${n} x ${c} = ${n*c}` // calculo para efetuada a tabuada (n x c) = (N*c).
+        item.value = `tab${c}` // serve pro php pra poder selecionar a linha e saber qual delas é ao se clicacada.
+        tab.appendChild(item) // 
+        c++ // incremento do c vai pra próxima 1x1 1x2
+    }
+  }
+} 
+
+-----///------///------///----------///------///------///----------///------///------///----------///------///------///-----

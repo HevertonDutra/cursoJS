@@ -1,12 +1,18 @@
-function tabuda() {
-  let numero = document.getElementById('txtn');
-  let res = Number(txtn.value);
-    
-} if (num.value.length == 0) {
-    res.innerHTML = 'Tenta outra'
-    window.alert = '[ERRO] bora amigix' 
-
-} else {
-    let num = Number(txtn.value);
-
-}
+function tabuada() {
+  let num = document.getElementById('txtn')
+  let tab = document.getElementById('seltab')
+  if (num.value.length == 0) {
+    window.alert('[ERRO] por favor, digite um número!')  
+  } else {
+    let n = Number(num.value)
+    let c = 1
+    tab.innerHTML = ''
+    while (c <= 10){
+        let item = document.createElement('option')
+        item.text = `${n} x ${c} = ${n*c}`
+        item.value = `tab${c}`
+        tab.appendChild(item)
+        c++
+    }
+  }
+} 
